@@ -1,4 +1,4 @@
 require("azdanov.opt")
-require("azdanov.remap")
+require("azdanov.keymap")
 require("azdanov.lazy")
 
