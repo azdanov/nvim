@@ -3,11 +3,11 @@ return {
     branch = "0.1.x",
     dependencies = {
         "nvim-lua/plenary.nvim",
-        "debugloop/telescope-undo.nvim"
+        "debugloop/telescope-undo.nvim",
     },
     keys = {
         { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
-        { "<leader>gf", "<cmd>Telescope git_files<cr>", desc = "Git Files" },
+        { "<leader>gf", "<cmd>Telescope git_files<cr>",  desc = "Git Files" },
     },
     config = function()
         require("telescope").setup {
@@ -37,8 +37,10 @@ return {
             },
         }
 
-        vim.keymap.set("n", "<leader>?", require("telescope.builtin").oldfiles, { desc = "[?] Find recently opened files" })
-        vim.keymap.set("n", "<leader><space>", require("telescope.builtin").buffers, { desc = "[ ] Find existing buffers" })
+        vim.keymap.set("n", "<leader>?", require("telescope.builtin").oldfiles,
+            { desc = "[?] Find recently opened files" })
+        vim.keymap.set("n", "<leader><space>", require("telescope.builtin").buffers,
+            { desc = "[ ] Find existing buffers" })
         vim.keymap.set("n", "<leader>/", function()
             require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown {
                 winblend = 10,
