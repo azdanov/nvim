@@ -12,7 +12,7 @@ return {
                 { buffer = bufnr, desc = "[R]e[n]ame" })
             vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action,
                 { buffer = bufnr, desc = "[C]ode [A]ction" })
-            vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format,
+            vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format,
                 { buffer = bufnr, desc = "[C]ode [F]ormat" })
 
             vim.keymap.set("n", "gd", vim.lsp.buf.definition,
