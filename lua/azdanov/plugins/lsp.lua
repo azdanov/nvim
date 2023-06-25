@@ -51,6 +51,7 @@ return {
         local servers = {
             gopls = {},
             tsserver = {},
+            terraformls = {},
             lua_ls = {
                 Lua = {
                     workspace = { checkThirdParty = false },
