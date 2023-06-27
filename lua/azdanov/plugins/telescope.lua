@@ -5,10 +5,6 @@ return {
         "nvim-lua/plenary.nvim",
         "debugloop/telescope-undo.nvim",
     },
-    keys = {
-        { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
-        { "<leader>gf", "<cmd>Telescope git_files<cr>",  desc = "Git Files" },
-    },
     config = function()
         require("telescope").setup {
             defaults = {
@@ -48,8 +44,8 @@ return {
             })
         end, { desc = "[/] Fuzzily search in current buffer" })
 
-        vim.keymap.set("n", "<leader>gf", require("telescope.builtin").git_files, { desc = "Search [G]it [F]iles" })
         vim.keymap.set("n", "<leader>sf", require("telescope.builtin").find_files, { desc = "[S]earch [F]iles" })
+        vim.keymap.set("n", "<leader>sg", require("telescope.builtin").git_files, { desc = "[S]earch [G]it files" })
         vim.keymap.set("n", "<leader>sh", require("telescope.builtin").help_tags, { desc = "[S]earch [H]elp" })
         vim.keymap.set("n", "<leader>sw", require("telescope.builtin").grep_string, { desc = "[S]earch current [W]ord" })
         vim.keymap.set("n", "<leader>sg", require("telescope.builtin").live_grep, { desc = "[S]earch by [G]rep" })
