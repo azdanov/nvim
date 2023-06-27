@@ -45,7 +45,6 @@ return {
         end
 
         local servers = {
-            gopls = {},
             tsserver = {},
             terraformls = {},
             lua_ls = {
